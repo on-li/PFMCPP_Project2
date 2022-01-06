@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ bool
+ int
+ float
+ unsigned int
+ char 
+ double
  
  
  
@@ -60,9 +60,31 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int month = 1;
+    int day = 6;
+    int year = 2022;
 
+    unsigned int a = 5;
+    unsigned int b = 6;
+    unsigned int c = 7;
+
+    float typingAngle = 6.5f;
+    float degreesFarenheit = 45.5f;
+    float degreesCelcius = 7.5f;
+
+    bool isRaining = false;
+    bool isWeekday = true;
+    bool isWeekend = false;
+
+    double priceOfCandy = 0.99;
+    double priceOfGas = 3.48;
+    double testScore = 83.50;
+
+    char firstInitial = 'L';
+    char middleInitial = 'L';
+    char lastInitial = 'H';
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, month, day, year, typingAngle, degreesFarenheit, degreesCelcius, isRaining, isWeekday, isWeekend, priceOfCandy, priceOfGas, testScore, a, b, c, firstInitial, middleInitial, lastInitial); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +101,80 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int checkWeather(bool isMetricUnit, std::string location)
+{
+    ignoreUnused(isMetricUnit, location);
+    return {};
+}
 /*
  2)
  */
-
+double calculatePrice(double price, int amount)
+{
+    ignoreUnused(price, amount);
+    return {};
+}
 /*
  3)
  */
-
+bool respondToInvitation(int numberOfPeople)
+{
+    ignoreUnused(numberOfPeople);
+    return {};
+}
 /*
  4)
  */
-
+void run()
+{
+    ignoreUnused();
+}
 /*
  5)
  */
-
+char changeKey(char key, int intervalChange)
+{
+    ignoreUnused(key, intervalChange);
+    return {};
+}
 /*
  6)
  */
-
+void enterInitials(char firstInitial, char middleInitial, char lastInitial)
+{
+    ignoreUnused(firstInitial, middleInitial, lastInitial);
+}
 /*
  7)
  */
-
+unsigned int calcAbsoluteValue(int integer)
+{
+    ignoreUnused(integer);
+    return {};
+}
 /*
  8)
  */
-
+float findDigitsOfPi(unsigned int numberOfDigits)
+{
+    ignoreUnused(numberOfDigits);
+    return {};
+}
 /*
  9)
  */
-
+int findKeyboardLayout(bool useNumpad, bool useNavigationKeys, bool useFunctionKeys, bool useArrowKeys)
+{
+    ignoreUnused(useNumpad, useNavigationKeys, useFunctionKeys, useArrowKeys);
+    return {};
+}
 /*
  10)
  */
-
+void performDailyActivities(int hoursToExercise, int hoursToWork, int hoursToLaze)
+{
+    ignoreUnused(hoursToExercise, hoursToWork, hoursToLaze);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +195,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto localWeather = checkWeather(false, "New York");
     //2)
-    
+    auto totalPrice = calculatePrice(25.99, 3);
     //3)
-    
+    auto response = respondToInvitation(10);
     //4)
-    
+    run();
     //5)
-    
+    auto newKey = changeKey('A', -4);
     //6)
-    
+    enterInitials('L','L','H');
     //7)
-    
+    auto absoluteValue = calcAbsoluteValue(-5);
     //8)
-    
+    auto threeDigitsOfPi = findDigitsOfPi(3);
     //9)
-    
+    auto idealLayout = findKeyboardLayout(false, false, false, true);
     //10)
+    performDailyActivities(2, 8, 3);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, localWeather, totalPrice, response, newKey, absoluteValue, threeDigitsOfPi, idealLayout);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
