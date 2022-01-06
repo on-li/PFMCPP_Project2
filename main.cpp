@@ -101,7 +101,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int checkWeather(bool isMetricUnit, std::string location)
+int checkWeather(bool isMetricUnit, std::string location = "USA")
 {
     ignoreUnused(isMetricUnit, location);
     return {};
@@ -109,7 +109,7 @@ int checkWeather(bool isMetricUnit, std::string location)
 /*
  2)
  */
-double calculatePrice(double price, int amount)
+double calculatePrice(double price, int amount = 1)
 {
     ignoreUnused(price, amount);
     return {};
@@ -132,7 +132,7 @@ void run()
 /*
  5)
  */
-char changeKey(char key, int intervalChange)
+char changeKey(char key = 'C', int intervalChange = 0)
 {
     ignoreUnused(key, intervalChange);
     return {};
@@ -155,7 +155,7 @@ unsigned int calcAbsoluteValue(int integer)
 /*
  8)
  */
-float findDigitsOfPi(unsigned int numberOfDigits)
+float findDigitsOfPi(unsigned int numberOfDigits = 5)
 {
     ignoreUnused(numberOfDigits);
     return {};
@@ -163,7 +163,7 @@ float findDigitsOfPi(unsigned int numberOfDigits)
 /*
  9)
  */
-int findKeyboardLayout(bool useNumpad, bool useNavigationKeys, bool useFunctionKeys, bool useArrowKeys)
+int findKeyboardLayout(bool useNumpad = false, bool useNavigationKeys = true, bool useFunctionKeys = true, bool useArrowKeys = true)
 {
     ignoreUnused(useNumpad, useNavigationKeys, useFunctionKeys, useArrowKeys);
     return {};
@@ -171,7 +171,7 @@ int findKeyboardLayout(bool useNumpad, bool useNavigationKeys, bool useFunctionK
 /*
  10)
  */
-void performDailyActivities(int hoursToExercise, int hoursToWork, int hoursToLaze)
+void performDailyActivities(int hoursToExercise = 1, int hoursToWork = 8, int hoursToLaze = 8)
 {
     ignoreUnused(hoursToExercise, hoursToWork, hoursToLaze);
 }
@@ -203,7 +203,7 @@ int main()
     //4)
     run();
     //5)
-    auto newKey = changeKey('A', -4);
+    auto newKey = changeKey(-4);
     //6)
     enterInitials('L','L','H');
     //7)
@@ -211,7 +211,7 @@ int main()
     //8)
     auto threeDigitsOfPi = findDigitsOfPi(3);
     //9)
-    auto idealLayout = findKeyboardLayout(false, false, false, true);
+    auto idealLayout = findKeyboardLayout(false, false, false);
     //10)
     performDailyActivities(2, 8, 3);
     
